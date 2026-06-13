@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hot Dish - Authentic Sri Lankan Cuisine</title>
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700,800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preload" as="style" href="http://127.0.0.1:8080/build/assets/app-BBEjmq-Q.css" /><link rel="modulepreload" as="script" href="http://127.0.0.1:8080/build/assets/app-UyRVujZY.js" /><link rel="stylesheet" href="http://127.0.0.1:8080/build/assets/app-BBEjmq-Q.css" data-navigate-track="reload" /><script type="module" src="http://127.0.0.1:8080/build/assets/app-UyRVujZY.js" data-navigate-track="reload"></script>
+<script>
+     window.addEventListener('load', () => window.setTimeout(() => {
+        const makeLink = (asset) => {
+            const link = document.createElement('link')
+
+            Object.keys(asset).forEach((attribute) => {
+                link.setAttribute(attribute, asset[attribute])
+            })
+
+            return link
+        }
+
+        const loadNext = (assets, count) => window.setTimeout(() => {
+            if (count > assets.length) {
+                count = assets.length
+
+                if (count === 0) {
+                    return
+                }
+            }
+
+            const fragment = new DocumentFragment
+
+            while (count > 0) {
+                const link = makeLink(assets.shift())
+                fragment.append(link)
+                count--
+
+                if (assets.length) {
+                    link.onload = () => loadNext(assets, 1)
+                    link.onerror = () => loadNext(assets, 1)
+                }
+            }
+
+            document.head.append(fragment)
+        })
+
+        loadNext([], 3)
+    }))
+</script>    </head>
+    <body class="min-h-screen flex flex-col antialiased">
+                    <nav class="sticky top-0 z-50 border-b border-white/10 bg-darkblue-600/95 backdrop-blur-xl">
+                <div class="page-shell">
+                    <div class="flex h-16 items-center justify-between gap-4">
+                        <a href="/" class="flex items-center gap-3">
+                            <img src="http://127.0.0.1:8080/assets/logo.jpg" alt="HOT DISH" class="h-10 w-10 rounded-full object-cover">
+                            <span class="text-lg font-bold text-white md:text-xl">HOT DISH</span>
+                        </a>
+
+                        <div class="hidden items-center gap-8 md:flex">
+                            <a href="/" class="text-sm font-semibold text-white/90 transition hover:text-primary-300">Home</a>
+                            <a href="/menu" class="text-sm font-semibold text-white/90 transition hover:text-primary-300">Menu</a>
+                            <a href="/about" class="text-sm font-semibold text-white/90 transition hover:text-primary-300">About</a>
+                            <a href="/contact" class="text-sm font-semibold text-white/90 transition hover:text-primary-300">Contact</a>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                                                            <a href="http://127.0.0.1:8080/login" class="text-sm font-semibold text-white/90 transition hover:text-primary-300">Login</a>
+                                                                    <a href="http://127.0.0.1:8080/register" class="rounded-full bg-primary-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-primary-500/30 transition hover:bg-primary-600">Sign Up</a>
+                                                                                    </div>
+                    </div>
+                </div>
+            </nav>
+        
+        <div class="relative overflow-hidden">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,107,53,0.22),transparent_26%),radial-gradient(circle_at_bottom_right,_rgba(44,62,80,0.18),transparent_28%)]"></div>
+            <div class="page-shell relative py-10 sm:py-16">
+                <div class="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+                    <div>
+                        <span class="section-kicker">Fresh, authentic, fast</span>
+                        <h1 class="mt-4 text-4xl font-black tracking-tight text-darkblue-700 sm:text-5xl lg:text-6xl">
+                            Authentic Sri Lankan <span class="text-primary-500">flavors</span> delivered with style.
+                        </h1>
+                        <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+                            Explore signature rice dishes, curries, and comforting sides made with traditional recipes and delivered hot to your doorstep.
+                        </p>
+                        <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                            <a href="/menu" class="btn-primary">Order now</a>
+                            <a href="/about" class="btn-outline">Learn more</a>
+                        </div>
+
+                        <div class="mt-8 grid gap-3 sm:grid-cols-3">
+                            <div class="stat-pill"><i class="fas fa-clock text-primary-500"></i><span class="ml-2">30 min delivery</span></div>
+                            <div class="stat-pill"><i class="fas fa-star text-primary-500"></i><span class="ml-2">Top rated cuisine</span></div>
+                            <div class="stat-pill"><i class="fas fa-leaf text-primary-500"></i><span class="ml-2">Fresh ingredients</span></div>
+                        </div>
+                    </div>
+
+                    <div class="hero-card">
+                        <div class="overflow-hidden rounded-[24px] bg-darkblue-700 p-5 text-white">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-sm uppercase tracking-[0.3em] text-primary-200">Featured today</p>
+                                    <h2 class="mt-3 text-2xl font-bold">Hot Dish special</h2>
+                                </div>
+                                <span class="rounded-full bg-primary-500 px-3 py-1 text-sm font-semibold">New</span>
+                            </div>
+                            <div class="mt-5 rounded-[20px] bg-white/10 p-4 backdrop-blur-sm">
+                                <p class="text-sm text-slate-100">Taste the perfect combination of roasted spices, coconut curry, and house-made rice bowls crafted for a memorable lunch.</p>
+                            </div>
+                            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                                <div class="rounded-[20px] bg-white/10 p-4">
+                                    <p class="text-xs uppercase tracking-[0.2em] text-primary-200">Most loved</p>
+                                    <p class="mt-2 text-lg font-semibold">Chicken Kottu</p>
+                                </div>
+                                <div class="rounded-[20px] bg-white/10 p-4">
+                                    <p class="text-xs uppercase tracking-[0.2em] text-primary-200">Chef's pick</p>
+                                    <p class="mt-2 text-lg font-semibold">Fish Ambul Thiyal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="page-shell py-6 sm:py-10">
+            <div class="grid gap-5 md:grid-cols-3">
+                <div class="card p-7 text-center">
+                    <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary-100 text-2xl text-primary-500"><i class="fas fa-shipping-fast"></i></div>
+                    <h3 class="mt-4 text-xl font-bold text-darkblue-700">Fast Delivery</h3>
+                    <p class="mt-2 text-sm leading-7 text-slate-600">Hot meals delivered quickly without compromising taste or freshness.</p>
+                </div>
+                <div class="card p-7 text-center">
+                    <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary-100 text-2xl text-primary-500"><i class="fas fa-utensils"></i></div>
+                    <h3 class="mt-4 text-xl font-bold text-darkblue-700">Authentic Recipes</h3>
+                    <p class="mt-2 text-sm leading-7 text-slate-600">Traditional Sri Lankan dishes prepared using time-honored methods.</p>
+                </div>
+                <div class="card p-7 text-center">
+                    <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary-100 text-2xl text-primary-500"><i class="fas fa-leaf"></i></div>
+                    <h3 class="mt-4 text-xl font-bold text-darkblue-700">Fresh Ingredients</h3>
+                    <p class="mt-2 text-sm leading-7 text-slate-600">Every dish is built around fresh produce, spices, and premium ingredients.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white py-12 sm:py-16">
+            <div class="page-shell">
+                <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+                    <div>
+                        <span class="section-kicker">Popular choices</span>
+                        <h2 class="section-title mt-4">Featured dishes for your next order</h2>
+                    </div>
+                    <a href="/menu" class="btn-outline">Browse full menu</a>
+                </div>
+
+                <div class="mt-8 grid gap-6 md:grid-cols-3">
+                                            <article class="card group overflow-hidden">
+                            <div class="relative h-52 overflow-hidden">
+                                <img src="http://127.0.0.1:8080/assets/vegetable-rice-curry.jpg" alt="Traditional Rice &amp; Curry" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                                <div class="absolute left-4 top-4 rounded-full bg-darkblue-700/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.3em] text-white">rice-curry</div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-darkblue-700">Traditional Rice &amp; Curry</h3>
+                                        <p class="mt-2 text-sm leading-6 text-slate-600">Authentic Sri Lankan rice with 5 curries</p>
+                                    </div>
+                                </div>
+                                <div class="mt-5 flex items-center justify-between">
+                                    <span class="text-2xl font-black text-primary-500">Rs. 850</span>
+                                    <a href="/menu" class="btn-primary">Order now</a>
+                                </div>
+                            </div>
+                        </article>
+                                            <article class="card group overflow-hidden">
+                            <div class="relative h-52 overflow-hidden">
+                                <img src="http://127.0.0.1:8080/assets/rice-and-curry.jpg" alt="Chicken Rice &amp; Curry" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                                <div class="absolute left-4 top-4 rounded-full bg-darkblue-700/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.3em] text-white">rice-curry</div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-darkblue-700">Chicken Rice &amp; Curry</h3>
+                                        <p class="mt-2 text-sm leading-6 text-slate-600">Spicy chicken curry with rice and sides</p>
+                                    </div>
+                                </div>
+                                <div class="mt-5 flex items-center justify-between">
+                                    <span class="text-2xl font-black text-primary-500">Rs. 950</span>
+                                    <a href="/menu" class="btn-primary">Order now</a>
+                                </div>
+                            </div>
+                        </article>
+                                            <article class="card group overflow-hidden">
+                            <div class="relative h-52 overflow-hidden">
+                                <img src="http://127.0.0.1:8080/assets/seafood-rice-curry.jpg" alt="Seafood Rice &amp; Curry" class="h-full w-full object-cover transition duration-500 group-hover:scale-105">
+                                <div class="absolute left-4 top-4 rounded-full bg-darkblue-700/80 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.3em] text-white">rice-curry</div>
+                            </div>
+                            <div class="p-6">
+                                <div class="flex items-start justify-between gap-4">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-darkblue-700">Seafood Rice &amp; Curry</h3>
+                                        <p class="mt-2 text-sm leading-6 text-slate-600">Ocean fresh seafood with red rice</p>
+                                    </div>
+                                </div>
+                                <div class="mt-5 flex items-center justify-between">
+                                    <span class="text-2xl font-black text-primary-500">Rs. 1,200</span>
+                                    <a href="/menu" class="btn-primary">Order now</a>
+                                </div>
+                            </div>
+                        </article>
+                                    </div>
+            </div>
+        </section>
+
+        <footer class="mt-auto bg-darkblue-700 text-white">
+            <div class="page-shell py-12">
+                <div class="grid gap-10 md:grid-cols-4">
+                    <div>
+                        <div class="mb-5 flex items-center gap-3">
+                            <img src="http://127.0.0.1:8080/assets/logo.jpg" alt="HOT DISH" class="h-10 w-10 rounded-full object-cover">
+                            <span class="text-lg font-bold">HOT DISH</span>
+                        </div>
+                        <p class="text-sm leading-7 text-slate-300">Authentic Sri Lankan flavors delivered to your doorstep with a modern ordering experience.</p>
+                    </div>
+                    <div>
+                        <h4 class="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-primary-300">Quick Links</h4>
+                        <ul class="space-y-3 text-sm text-slate-200">
+                            <li><a href="/" class="transition hover:text-primary-300">Home</a></li>
+                            <li><a href="/menu" class="transition hover:text-primary-300">Menu</a></li>
+                            <li><a href="/about" class="transition hover:text-primary-300">About</a></li>
+                            <li><a href="/contact" class="transition hover:text-primary-300">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-primary-300">Contact</h4>
+                        <ul class="space-y-3 text-sm text-slate-200">
+                            <li class="flex items-center gap-3"><span class="text-primary-300">☎</span> +94 11 234 5678</li>
+                            <li class="flex items-center gap-3"><span class="text-primary-300">✉</span> info@hotdish.lk</li>
+                            <li class="flex items-center gap-3"><span class="text-primary-300">📍</span> Colombo, Sri Lanka</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-primary-300">Service</h4>
+                        <p class="text-sm leading-7 text-slate-200">Open daily from 10:00 AM to 10:00 PM with fast delivery and kitchen-fresh meals.</p>
+                    </div>
+                </div>
+                <div class="mt-10 border-t border-white/10 pt-6 text-center text-sm text-slate-300">
+                    &copy; 2026 Hot Dish. All rights reserved.
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
