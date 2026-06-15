@@ -25,7 +25,7 @@ class Cart extends Component
         $subtotal = $cartItems->sum(function($item) {
             return $item->menuItem->price * $item->quantity;
         });
-
+//subtotal is the sum of all cart items, calculated by multiplying the price of each menu item by its quantity and then summing those values together.
         return view('livewire.cart', [
             'cartItems' => $cartItems,
             'subtotal' => $subtotal,
@@ -33,7 +33,7 @@ class Cart extends Component
             'total' => $subtotal + 250
         ])->layout('layouts.frontend');
     }
-
+//cart quentity increment, decrement, and remove functions. Each function checks if the cart item belongs to the authenticated user before performing the action. After updating the cart, it dispatches a 'cartUpdated' event to notify other components of the change.
     public function incrementQuantity($cartId)
     {
         $cartItem = CartItem::find($cartId);
@@ -52,6 +52,7 @@ class Cart extends Component
             } else {
                 $cartItem->delete();
             }
+            // After updating the cart, it dispatches a 'cartUpdated' event to notify other components of the change.
             $this->dispatch('cartUpdated');
         }
     }

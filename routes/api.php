@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 // ==========================================
-// PUBLIC ROUTES - Accessible without authentication
+// PUBLIC ROUTES - Accessible without authentication END POINT FOR API
 // ==========================================
 
 // Menu routes - publicly accessible

@@ -18,7 +18,7 @@ class CustomerController extends Controller
 
         $customers = User::where('role', 'user')
             ->withCount('orders')
-            ->latest('id')
+            ->latest('user_id')
             ->get();
 
         return view('admin.customers', [

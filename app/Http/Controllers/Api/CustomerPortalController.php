@@ -9,6 +9,7 @@ class CustomerPortalController extends Controller
 {
     public function cart(Request $request)
     {
+        //specific to the authenticated user
         $cartItems = $request->user()
             ->cartItems()
             ->with('menuItem')

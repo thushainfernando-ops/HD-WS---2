@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
+    //read
     public function index(Request $request)
     {
         $editingItem = null;
@@ -31,12 +32,12 @@ class MenuController extends Controller
             'category' => 'required|string|max:80',
             'image' => 'nullable|string|max:200',
         ]);
-
+//create
         MenuItem::create($validated);
 
         return back()->with('success', 'Menu item added successfully.');
     }
-
+//update
     public function update(Request $request, MenuItem $menuItem)
     {
         $validated = $request->validate([
@@ -51,7 +52,7 @@ class MenuController extends Controller
 
         return back()->with('success', 'Menu item updated successfully.');
     }
-
+//delete
     public function destroy(MenuItem $menuItem)
     {
         $menuItem->delete();

@@ -58,6 +58,7 @@ class PaymentController extends Controller
      */
     public function processPayment(Request $request)
     {
+        // Validate incoming request data
         $validated = $request->validate([
             'order_id' => 'required|exists:orders,order_id',
             'stripe_token' => 'required|string',

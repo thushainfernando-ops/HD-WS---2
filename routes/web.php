@@ -19,10 +19,13 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
-
+//use jeststream protected routes for dashboard, cart, checkout, and order success pages. These routes require authentication and email verification, ensuring that only logged-in users can access them. The admin dashboard route is further protected by an 'admin' middleware to restrict access to administrators only.
 Route::middleware([
+    //Checks whether the user is authenticated.
     'auth:sanctum',
+    //Manages authenticated user sessions through Jetstream.
     config('jetstream.auth_session'),
+    //Allows access only to verified users.
     'verified',
 ])->group(function () {
     Route::get('/dashboard', function () {

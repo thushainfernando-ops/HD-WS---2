@@ -23,6 +23,24 @@ class User extends Authenticatable
     use TwoFactorAuthenticatable;
 
     /**
+     * The primary key associated with the model.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'user_id';
+
+    /**
+     * Accessor alias for the custom primary key.
+     * This allows code that uses $user->id to work.
+     *
+     * @return int|null
+     */
+    public function getIdAttribute(): ?int
+    {
+        return $this->getAttribute($this->primaryKey);
+    }
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
@@ -66,7 +84,6 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
-            'phone' => 'encrypted',
         ];
     }
 
@@ -74,7 +91,9 @@ class User extends Authenticatable
     {
         return $this->role === 'admin';
     }
-
+//each user can have many orders and cart items, 
+// which are defined by the orders() and cartItems() relationship methods. 
+// These methods use Eloquent's hasMany relationship to link the User model to the Order and CartItem models based on the user_id foreign key.
     public function orders()
     {
         return $this->hasMany(Order::class, 'user_id');
